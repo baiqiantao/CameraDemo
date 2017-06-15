@@ -1,7 +1,6 @@
 package com.bqt.camerademo;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -26,9 +25,10 @@ public class CustomView extends FrameLayout {
 
 	public void initialize(Context context) {
 		iv = new ImageView(context);
+		this.addView(iv);
 	}
 
-	public void setImage(Drawable drawable) {
-		iv.setImageDrawable(drawable);
+	public ImageView getImageView() {
+		return iv;
 	}
 }
